@@ -1,4 +1,4 @@
-// swift-tools-version:5.5
+// swift-tools-version: 5.9
 
 import PackageDescription
 
@@ -6,7 +6,8 @@ let package = Package(
     name: "smithy-swift",
     platforms: [
         .macOS(.v10_15),
-        .iOS(.v13)
+        .iOS(.v13),
+        .visionOS(.v1)
     ],
     products: [
         .library(name: "ClientRuntime", targets: ["ClientRuntime"]),
