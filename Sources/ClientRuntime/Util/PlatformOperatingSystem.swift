@@ -10,6 +10,7 @@ public enum PlatformOperatingSystem: String {
     case linux
     case iOS
     case macOS
+    case visionOS
     case watchOS
     case tvOS
     case unknown
@@ -28,6 +29,8 @@ public var currentOS: PlatformOperatingSystem {
     return .windows
     #elseif os(tvOS)
     return .tvOS
+    #elseif os(visionOS)
+    return .visionOS
     #else
      #error("Cannot use a an operating system we do not support")
     #endif
